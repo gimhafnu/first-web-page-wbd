@@ -108,6 +108,15 @@ function show_Page(n) {
         next[0].style.opacity = "1";
         next[0].style.visibility = "visible";
     }
+
+    // The image of Ynchlavr giving a... welcoming hug on the first page is kind of bugged, this attempts to create a workaround :
+    if (pg_idx === 1) {
+        document.getElementById("outer_welcome_tiger_div").style.opacity = "1";
+        document.getElementsByTagName('html')[0].style.overflow = "hidden"; // also disables scrolling on the first page
+    } else {
+        document.getElementById("outer_welcome_tiger_div").style.opacity = "0";
+        document.getElementsByTagName('html')[0].style.overflow = "auto";
+    }
 }
 
 function change_Page(n) {
@@ -122,12 +131,6 @@ function show_Hidden_Page() {
     var outer_pages = document.getElementsByClassName("outer_page_div");
     var dots = document.getElementsByClassName("dot");
     var hidden_dot = document.getElementsByClassName("hiddenDot");
-
-    // The hidden tiger img is kinda buggy, this is an attempt to work around it :
-    var hidden_img_divs = document.getElementsByClassName("hidden_img_div");
-    for (i = 0; i < hidden_img_divs.length; i++) {
-        hidden_img_divs[i].style.opacity = "1";
-    }
 
     // Hides the other outer_pages
     for (i = 0; i < pg_hidden; i++) {
@@ -146,6 +149,12 @@ function show_Hidden_Page() {
     outer_pages[pg_idx - 1].style.height = "100%";
     hidden_dot[0].className += " hiddenDot_active";
 
+    // The hidden tiger img is kinda buggy, this is an attempt to work around it :
+    var hidden_img_divs = document.getElementsByClassName("hidden_img_div");
+    for (i = 0; i < hidden_img_divs.length; i++) {
+        hidden_img_divs[i].style.opacity = "1";
+    }
+
     // Reshow the prev/next buttons
     var prev = document.getElementsByClassName("prev");
     var next = document.getElementsByClassName("next");
@@ -153,6 +162,10 @@ function show_Hidden_Page() {
     prev[0].style.visibility = "visible";
     next[0].style.opacity = "1";
     next[0].style.visibility = "visible";
+
+    // The image of Ynchlavr giving a... welcoming hug on the first page is kind of bugged, this attempts to create a workaround :
+    document.getElementById("outer_welcome_tiger_div").style.opacity = "0";
+    document.getElementsByTagName('html')[0].style.overflow = "auto";
 
 }
 
