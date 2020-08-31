@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IF3110 - My First Web Page - 13518127</title>
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/main.js"></script>
+		<!-- Google Material Icon Fonts through Google Web Fonts -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Comfortaa Font Family through Google Web Fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+	</head>
+	<body>
+		<div class="outer">
+			<!-- Next and Prev buttons -->
+			<div class="prev" onclick="relative_Page(-1)" style="opacity: 0; visibility: hidden;"><span
+				class="material-icons">navigate_before</span></div>
+			<div class="next" onclick="relative_Page(1)"><span class="material-icons">navigate_next</span></div>
+			<div class="page_outer">
+				<div class="outer_page_div" style="opacity: 1; visibility: visible; height : 100%;">
+					<div id="welcome_div" class="page_div">
+                        <h1>WELCOME!</h1>
+                        <br>
+						<div class="tiger_img_div">
+							<img id="tiger_light" class="tiger_img" src="imgs/tiger light.png">
+						</div>
+						<div class="tiger_img_div">
+							<img id="tiger_dark" class="tiger_img" src="imgs/tiger dark.png"
+								style="opacity: 0; visibility: hidden;">
+						</div>
+					</div>
+				</div>
+				<div class="outer_page_div" style="opacity: 0; visibility: hidden; height : 0;">
+					<div class="page_div">
+						<div>
+							<img src="imgs/prof_circ.png" width="128px" height="auto">
+							<h2>Hanif Muhamad Gana</h2>
+							<p>13518127</p>
+						</div>
+					</div>
+				</div>
+				<div class="outer_page_div" style="opacity: 0; visibility: hidden; height : 0;">
+					<div class="page_div">
+                        <h2>Introductions</h2>
+                        <p>I am a 2018 Informatics student at STEI ITB.</p>
+                        <p>My skills include programming in C, C++, C#, Java, Python.</p>
+                        <p>I got interested in programming and informatics due to games and their designs.<br>The game engines I have used include Unity, GameMaker Studio, and Godot.</p>
+                        <p>On my freetime I like to write stories, draw, and make short musics,<br>That is, when I'm not making or playing games.</p>
+                        <p style="font-size: 16px;">I drew the images of the tiger used in this "web" page!<br>And the tiger's name is Ynchlavr!</p>
+					</div>
+				</div>
+				<div class="outer_page_div" style="opacity: 0; visibility: hidden; height : 0">
+					<div class="page_div">
+						<h2>Contacts</h2>
+						<a href="https://github.com/gimhafnu">GitHub</a>
+					</div>
+				</div>
+				<div class="outer_page_div" style="opacity: 0; visibility: hidden; height : 0">
+					<div class="page_div">
+						<h2>About</h2>
+						<p>This "web" page was created to fulfill the first assignment of IF3110</p>
+						<p>This "web" page uses the Comfortaa font family and the Material Icon Icon Fonts,
+							<br>both of which are hosted on Google Web Fonts
+                        </p>
+                        <p style="font-size: 16px;">This "web" page was only ever tested in Chromium-based browsers. <br> If something looks weird, please try opening it on a Chromium-based browser.</p>
+                        <p style="font-size: 12px;">I don't know what to put on these pages, haha.</p>
+						<div id="ps_div">
+							<p>p.s. There's a hidden page on this "web" page, can you find it?
+								<br> hint : does something look like it's unbalanced?
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="outer_page_div" style="opacity: 0; visibility: hidden; height : 0">
+					<div class="page_div">
+						<h2>Snooping as usual, I see!</h2>
+						<p>You searched around and found the hidden page, congrats!</p>
+						<div style="display: flex; text-align: center;">
+                            <div style="flex: 1 1 auto; text-align: right;">
+                                <div class="hidden_img_div">
+                                    <img id="hidden_img_light" class="hidden_img" src="imgs/Random Unamused Tiger.png">
+                                </div>
+                                <div class="hidden_img_div">
+                                    <img id="hidden_img_dark" class="hidden_img" src="imgs/Random Unamused Tiger - blue.png"
+                                    style="opacity: 0; visibility: hidden;">
+                                </div>
+                                <img id="hidden_img_hidden" src="imgs/Random Unamused Tiger - blue.png">
+                            </div>
+							<div style="flex: 1 1 auto; text-align: left;">
+                                <p style="padding-left: 32px;">Unamused tiger is unamused<br>at the amount of snooping you did.</p>
+							</div>
+						</div>
+						<p></p>
+					</div>
+				</div>
+			</div>
+			<div class=" footer">
+				<div class="darkToggle" onclick="darkToggle()">
+					<span class="material-icons">brightness_4</span>
+				</div>
+				<div class="hiddenDotDiv">
+					<span class="hiddenDot" onclick="show_Hidden_Page()"></span>
+				</div>
+				<div class="dot_div">
+					<span class="dot dot_active" onclick="change_Page(1)"></span>
+					<span class="dot" onclick="change_Page(2)"></span>
+					<span class="dot" onclick="change_Page(3)"></span>
+					<span class="dot" onclick="change_Page(4)"></span>
+					<span class="dot" onclick="change_Page(5)"></span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

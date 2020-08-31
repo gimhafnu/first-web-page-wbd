@@ -1,0 +1,236 @@
+html {
+    height: 100%;
+    margin: 0;
+    scrollbar-width: none;
+    /* DIsables Scrollbar in Firefox */
+}
+
+::-webkit-scrollbar {
+    display: none;
+    /* DIsables Scrollbar in Chromium */
+}
+
+body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #eaeaea;
+    color: #0e0e0e;
+    transition: color 0.5s linear, background-color 0.6s ease;
+    font-family: 'Comfortaa';
+    font-size: 25px;
+    height: 100%;
+    margin: 0;
+}
+
+.dark-mode {
+    background-color: #141414;
+    color: #eaeaea;
+}
+
+.outer {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.page_outer {
+    flex: 1 1 auto;
+}
+
+.outer_page_div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.page_div {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tiger_img_div {
+    flex: 1 1 auto;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    height: max-content;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.tiger_img {
+    width: 80%;
+    height: auto;
+    transition: visibility 0.6s, opacity 0.6s linear;
+}
+
+#welcome_div {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    text-align: center;
+    padding: 20px;
+    background: #dedede;
+    bottom: 0px;
+    width: 100%;
+    transition: background-color 0.6s ease;
+}
+
+.footer_dark {
+    background: #1e1e1e;
+}
+
+.dot_div {
+    margin-left: -52px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #aaa;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot_active, .dot:hover {
+    background-color: #717171;
+}
+
+.dot_dark {
+    background-color: #444;
+}
+
+.dot_active, .dot:hover {
+    background-color: #717171;
+}
+
+.hiddenDot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #dedede;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.hiddenDot_dark {
+    background-color: #1e1e1e;
+}
+
+.hiddenDot_active {
+    background-color: #717171;
+}
+
+.hiddenDotDiv {
+    position: absolute;
+    right: 60px;
+}
+
+.darkToggle {
+    cursor: pointer;
+    position: absolute;
+    left: 12px;
+    color: #0e0e0e;
+    transition: color 0.6s ease;
+}
+
+.darkToggle:hover {
+    color: #5e5e5e;
+}
+
+.darkToggle_dark {
+    position: absolute;
+    left: 12px;
+    color: #bebebe;
+}
+
+.darkToggle_dark:hover {
+    color: #8e8e8e;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 2px 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Next Prev Buttons */
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: visibility 0.4s, opacity 0.4s linear;
+    z-index: 2;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover, .next:hover {
+    background-color: #0e0e0eae;
+    color: #ffffff;
+}
+
+.prev_dark:hover, .next_dark:hover {
+    background-color: #bebebeae;
+    color: #0e0e0e;
+}
+
+
+#hidden_img_hidden {
+    width: 128px;
+    display: inline-block;
+    *display: inline;
+    vertical-align: center;
+    opacity: 0;
+}
+
+.hidden_img_div {
+    position: relative;
+    justify-content: space-between;
+}
+
+.hidden_img {
+    width: 128px;
+    position: absolute;
+    right: 0px;
+    transition: visibility 0.6s, opacity 0.6s linear;
+}
+
+#ps_div {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    font-size: 10px;
+}
